@@ -1,0 +1,9 @@
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\bin\Debug\BilgiYarismasi.exe.config
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\bin\Debug\BilgiYarismasi.exe
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\bin\Debug\BilgiYarismasi.pdb
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\obj\Debug\BilgiYarismasi.csprojResolveAssemblyReference.cache
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\obj\Debug\BilgiYarismasi.Form1.resources
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\obj\Debug\BilgiYarismasi.Properties.Resources.resources
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\obj\Debug\BilgiYarismasi.csproj.GenerateResource.Cache
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\obj\Debug\BilgiYarismasi.exe
+C:\Users\Asus\Documents\Visual Studio 2015\Projects\BilgiYarismasi\BilgiYarismasi\obj\Debug\BilgiYarismasi.pdb
