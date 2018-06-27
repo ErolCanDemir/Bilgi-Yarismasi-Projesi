@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnA = new System.Windows.Forms.Button();
@@ -45,8 +46,13 @@
             this.btnSonraki = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -100,9 +106,9 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(459, 9);
+            this.Label1.Location = new System.Drawing.Point(417, 9);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(84, 23);
+            this.Label1.Size = new System.Drawing.Size(103, 29);
             this.Label1.TabIndex = 2;
             this.Label1.Text = "Soru No:";
             this.Label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -110,18 +116,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(476, 48);
+            this.label2.Location = new System.Drawing.Point(436, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 23);
+            this.label2.Size = new System.Drawing.Size(84, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Doğru:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(477, 85);
+            this.label3.Location = new System.Drawing.Point(440, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 23);
+            this.label3.Size = new System.Drawing.Size(80, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Yanlış:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,27 +135,27 @@
             // lblSoruno
             // 
             this.lblSoruno.AutoSize = true;
-            this.lblSoruno.Location = new System.Drawing.Point(549, 9);
+            this.lblSoruno.Location = new System.Drawing.Point(521, 9);
             this.lblSoruno.Name = "lblSoruno";
-            this.lblSoruno.Size = new System.Drawing.Size(20, 23);
+            this.lblSoruno.Size = new System.Drawing.Size(25, 29);
             this.lblSoruno.TabIndex = 5;
             this.lblSoruno.Text = "0";
             // 
             // lblDoğru
             // 
             this.lblDoğru.AutoSize = true;
-            this.lblDoğru.Location = new System.Drawing.Point(549, 48);
+            this.lblDoğru.Location = new System.Drawing.Point(521, 48);
             this.lblDoğru.Name = "lblDoğru";
-            this.lblDoğru.Size = new System.Drawing.Size(20, 23);
+            this.lblDoğru.Size = new System.Drawing.Size(25, 29);
             this.lblDoğru.TabIndex = 6;
             this.lblDoğru.Text = "0";
             // 
             // lblYanlis
             // 
             this.lblYanlis.AutoSize = true;
-            this.lblYanlis.Location = new System.Drawing.Point(549, 85);
+            this.lblYanlis.Location = new System.Drawing.Point(521, 83);
             this.lblYanlis.Name = "lblYanlis";
-            this.lblYanlis.Size = new System.Drawing.Size(20, 23);
+            this.lblYanlis.Size = new System.Drawing.Size(25, 29);
             this.lblYanlis.TabIndex = 6;
             this.lblYanlis.Text = "0";
             // 
@@ -190,7 +196,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(32, 258);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 23);
+            this.label4.Size = new System.Drawing.Size(75, 29);
             this.label4.TabIndex = 9;
             this.label4.Text = "label4";
             this.label4.Visible = false;
@@ -200,16 +206,51 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(141, 258);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 23);
+            this.label5.Size = new System.Drawing.Size(74, 29);
             this.label5.TabIndex = 10;
             this.label5.Text = "label5";
             this.label5.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(24, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 29);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "0";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(552, 21);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(74, 75);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 29);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Süre";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(642, 247);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSonraki);
@@ -230,8 +271,11 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Form1";
             this.Text = "Bilgi Yarışması";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,6 +299,10 @@
         private System.Windows.Forms.Button btnSonraki;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label7;
     }
 }
 

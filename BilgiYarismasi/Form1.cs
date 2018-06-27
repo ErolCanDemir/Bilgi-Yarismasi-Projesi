@@ -19,9 +19,11 @@ namespace BilgiYarismasi
 
         int soruno = 0,dogru = 0,yanlis=0;
         int puan = 0;
-
+        int sayac = 10;
+        
         private void btnB_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
             btnA.Enabled = false;
             btnB.Enabled = false;
             btnC.Enabled = false;
@@ -45,6 +47,7 @@ namespace BilgiYarismasi
 
         private void btnC_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
             btnA.Enabled = false;
             btnB.Enabled = false;
             btnC.Enabled = false;
@@ -68,6 +71,7 @@ namespace BilgiYarismasi
 
         private void btnD_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
             btnA.Enabled = false;
             btnB.Enabled = false;
             btnC.Enabled = false;
@@ -89,8 +93,10 @@ namespace BilgiYarismasi
             }
         }
 
+        
         private void btnA_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
             btnA.Enabled = false;
             btnB.Enabled = false;
             btnC.Enabled = false;
@@ -112,8 +118,34 @@ namespace BilgiYarismasi
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
+            btnSonraki.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            sayac--;
+            label6.Text = sayac.ToString();
+            if (sayac == 0)
+            {
+                MessageBox.Show("Soruyu 10 saniye içinde bilemediniz.");
+                sayac = 10;
+                yanlis++;
+                btnA.Enabled = false;
+                btnB.Enabled = false;
+                btnC.Enabled = false;
+                btnD.Enabled = false;
+                btnSonraki.Enabled = true;
+            }
+        }
         private void btnSonraki_Click(object sender, EventArgs e)
         {
+            sayac = 10;
             btnA.Enabled = true;
             btnB.Enabled = true;
             btnC.Enabled = true;
@@ -125,6 +157,7 @@ namespace BilgiYarismasi
             lblSoruno.Text = soruno.ToString();
             if(soruno ==1)
             {
+                timer1.Start();
                 richTextBox1.Text = "Cumhuriyet Kaç Yılında İlan Edilmiştir?";
                 btnA.Text = "1920";
                 btnB.Text = "1921";
@@ -134,6 +167,7 @@ namespace BilgiYarismasi
             }
             if(soruno==2)
             {
+                timer1.Start();
                 richTextBox1.Text = "Hangi İl Ege Bölgemizde Bulunmaz?";
                 btnA.Text = "İzmir";
                 btnB.Text = "Balıkesir";
@@ -143,6 +177,7 @@ namespace BilgiYarismasi
             }
             if(soruno==3)
             {
+                timer1.Start();
                 richTextBox1.Text = "Son Kuşlar Kitabı Hangi Yazara Aittir?";
                 btnA.Text = "Sait Faik";
                 btnB.Text = "Cemal Süreya";
@@ -152,6 +187,7 @@ namespace BilgiYarismasi
             }
             if (soruno == 4)
             {
+                timer1.Start();
                 richTextBox1.Text = "Ülkemizin Başkenti Hangisidir?";
                 btnA.Text = "İstanbul";
                 btnB.Text = "Ankara";
@@ -161,6 +197,7 @@ namespace BilgiYarismasi
             }
             if (soruno == 5)
             {
+                timer1.Start();
                 richTextBox1.Text = "Aşağıdakilerden hangisi temel programlama dilleri arasında yer alır?";
                 btnA.Text = "C#";
                 btnB.Text = "JAVA";
@@ -170,6 +207,7 @@ namespace BilgiYarismasi
             }
             if (soruno == 6)
             {
+                timer1.Start();
                 richTextBox1.Text = "Bir futbol karşılasmasında oynanan topun resmi kurallara göre ağırlığı ne kadar olmalıdır?";
                 btnA.Text = "448 gram";
                 btnB.Text = "450 gram";
@@ -179,6 +217,7 @@ namespace BilgiYarismasi
             }
             if (soruno == 7)
             {
+                timer1.Start();
                 richTextBox1.Text = "Kurtuluş savaşında düzenli ordunun Batı Cephesindeki ilk zaferi hangisidir?";
                 btnA.Text = "Eskişehir-Kütahya Savaşı";
                 btnB.Text = "1.İnönü";
@@ -188,6 +227,7 @@ namespace BilgiYarismasi
             }
             if (soruno == 8)
             {
+                timer1.Start();
                 richTextBox1.Text = "Manda ve Himaye fikri ilk kez nerede reddedilmiştir?";
                 btnA.Text = "Amasya Genelgesi";
                 btnB.Text = "Sivas Kongresi";
@@ -197,6 +237,7 @@ namespace BilgiYarismasi
             }
             if (soruno == 9)
             {
+                timer1.Start();
                 richTextBox1.Text = "Maddenin ölçülemeyen özelliği hangisidir?";
                 btnA.Text = "Ağırlık";
                 btnB.Text = "Boy";
@@ -206,6 +247,7 @@ namespace BilgiYarismasi
             }
             if (soruno == 10)
             {
+                timer1.Start();
                 richTextBox1.Text = "Çocuk hakları günü hangi gün kutlanmaktadır?";
                 btnA.Text = "10 Eylül";
                 btnB.Text = "20 Ekim";
@@ -216,6 +258,7 @@ namespace BilgiYarismasi
             }
             if (soruno==11)
             {
+                timer1.Start();
                 btnA.Enabled = false;
                 btnB.Enabled = false;
                 btnC.Enabled = false;
